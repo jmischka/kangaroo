@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import SearchFormStyles from "./styles/SearchFormStyles";
 
 function SearchForm(props) {
@@ -10,6 +11,18 @@ function SearchForm(props) {
             </form>
         </SearchFormStyles>
     )
+}
+
+SearchForm.propTypes = {
+    handleChange: PropTypes.func,
+    handleSubmit: PropTypes.func,
+    inputs: PropTypes.shape({
+        search: PropTypes.string
+    }),
+    listData: PropTypes.shape({
+        isLoading: PropTypes.bool,
+        results: PropTypes.array
+    })
 }
 
 export default SearchForm

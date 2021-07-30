@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import AlbumStyles from "./styles/AlbumStyles";
 
@@ -16,6 +17,17 @@ function Albums(props) {
             </span>
         </AlbumStyles>
     )
+}
+
+Albums.propTypes = {
+    handleAlbumClick: PropTypes.func,
+    album: PropTypes.shape({
+        artistName: PropTypes.string,
+        artworkUrl100: PropTypes.string,
+        name: PropTypes.string,
+        releaseDate: PropTypes.string,
+        url: PropTypes.string
+    })
 }
 
 export default Albums;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import AlbumDetailsStyles from "./styles/AlbumDetailsStyles";
 
 function AlbumDetails(props) {
@@ -14,6 +15,16 @@ function AlbumDetails(props) {
             </div>
         </AlbumDetailsStyles>
     )
+}
+
+AlbumDetails.propTypes = {
+    detail: PropTypes.shape({
+        albumCover: PropTypes.string,
+        albumName: PropTypes.string,
+        albumUrl: PropTypes.string,
+        artistName: PropTypes.string,
+        releaseDate: PropTypes.string
+    })
 }
 
 export default AlbumDetails;

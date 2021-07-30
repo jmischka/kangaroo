@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import WikiListStyles from './styles/WikiListStyles';
 import WikiListItem from './WikiListItem';
 
@@ -20,6 +21,13 @@ function WikiList(props) {
             }
         </WikiListStyles>
     )
+}
+
+WikiList.propTypes = {
+    listData: PropTypes.shape({
+        isLoading: PropTypes.bool,
+        results: PropTypes.array
+    })
 }
 
 export default WikiList;

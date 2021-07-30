@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import TopAlbumsStyles from './styles/TopAlbumsStyles';
 import Albums from '../components/Albums';
 
@@ -13,6 +14,13 @@ function TopAlbums(props) {
             }
         </TopAlbumsStyles>
     )
+}
+
+TopAlbums.propTypes = {
+    albums: PropTypes.shape({
+        isLoading: PropTypes.bool,
+        data: PropTypes.array
+    })
 }
 
 export default TopAlbums;
