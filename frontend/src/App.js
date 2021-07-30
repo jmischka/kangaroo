@@ -3,15 +3,14 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import TopAlbums from './pages/TopAlbums';
 import WikiSearch from './pages/WikiSearch';
+import AlbumDetails from "./pages/AlbumDetails";
 import Header from './components/Header';
-import AlbumDetail from "./components/AlbumDetail";
 const axios = require('axios');
 
 function App() {
   const [albums, setAlbums] = useState({isLoading: false, data: []}); 
   const [detail, setDetail] = useState({artistName: '', albumName: '', albumCover: '', releaseDate: '', albumUrl: ''});
-  const [triggered, setTriggered] = useState(false);
-
+  
   useEffect(() => {
     setAlbums({isLoading: true})
     axios.get('/topalbums').then(response => {
@@ -30,11 +29,6 @@ function App() {
       releaseDate: e.target.dataset.releasedate,
       albumUrl: e.target.dataset.albumurl
     })
-    setTriggered(!triggered);
-  }
-
-  const handleButtonClick = (e) => {
-    setTriggered(!triggered);
   }
   
   return (
@@ -48,12 +42,13 @@ function App() {
             <Route path="/search">
               <WikiSearch />
             </Route>
-            <Route path="/">
+            <Route exact path="/">
               <TopAlbums albums={albums} handleAlbumClick={handleAlbumClick} />
             </Route>
+            <Route path="/album-details">
+              <AlbumDetails detail={detail} />
+            </Route>
           </Switch>
-
-          <AlbumDetail detail={detail} triggered={triggered} handleButtonClick={handleButtonClick} />
         </div>
       </Router>
     </div>

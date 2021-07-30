@@ -4,7 +4,6 @@ import useForm from '../utils/useForm';
 
 function WikiSearch() {
     const [inputs, handleChange, handleSubmit, listData] = useForm({search: ''})
-    console.log(listData);
     return (
         <div>
             <SearchForm inputs={inputs} handleChange={handleChange} handleSubmit={handleSubmit} listData={listData} />

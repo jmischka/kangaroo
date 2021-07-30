@@ -1,29 +1,5 @@
-import styled from 'styled-components';
+import WikiListStyles from './styles/WikiListStyles';
 import WikiListItem from './WikiListItem';
-
-const WikiListStyles = styled.div`
-    position: relative;
-    margin: 0 auto 100px;
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-
-    p {
-        margin: 0;
-        width: 100%;
-        font-size: 1.6em;
-        font-weight: 400;
-        line-height: 1.3;
-    }
-
-    ul {
-        margin: 0;
-        width: 100%;
-        height: auto;
-        list-style-type: none;
-        padding: 0;
-    }
-`
 
 function WikiList(props) {
     if (!props.listData.isLoading && props.listData.results.length < 1) {
