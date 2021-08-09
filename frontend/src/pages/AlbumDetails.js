@@ -1,7 +1,12 @@
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import AlbumDetailsStyles from "./styles/AlbumDetailsStyles";
 
 function AlbumDetails(props) {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     return (
         <AlbumDetailsStyles>
             <figure>

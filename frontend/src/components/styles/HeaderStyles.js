@@ -8,7 +8,7 @@ const HeaderStyles = styled.header`
     width: 100%;
     height: auto;
     background-color: white;
-    padding: 0 16px;
+    padding: 0 25px;
     background-color: rgba(255,255,255,.9);
     z-index: 10;
 

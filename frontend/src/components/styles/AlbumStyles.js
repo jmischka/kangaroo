@@ -2,9 +2,6 @@ import styled from 'styled-components';
 
 const AlbumStyles = styled.li`
     position: relative;
-    margin: 16px;
-    width: calc(25% - 32px);
-    height: auto;
     padding: 16px;
     border: 1px dotted #666666;
     background-color: white;
@@ -12,14 +9,6 @@ const AlbumStyles = styled.li`
     &:hover {
         transform: translateY(-6px);
         box-shadow: 3px 3px 10px rgba(0,0,0,.2);
-    }
-
-    @media screen and (max-width: 1050px) {
-        width: calc(50% - 32px);
-    }
-
-    @media screen and (max-width: 600px) {
-        width: calc(100% - 32px);
     }
 
     span.click-trigger {

@@ -38,6 +38,10 @@ function WikiSearch() {
         }
     }, [throttledGetData]);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div>
             <SearchForm input={input} handleInputChange={handleInputChange} handleKeyUp={handleKeyUp} />

@@ -13,19 +13,19 @@ const TopAlbumsStyles = styled.div`
     position: relative;
     margin: 50px auto;
     width: 100%; 
-    max-width: 1232px;
+    max-width: 1250px;
     height: auto;
     padding: 100px 0 75px;
 
     ul {
         position: relative;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: 25px;
         margin: 25px 0 0;
         width: 100%;
-        padding: 0;
+        padding: 0 25px;
         list-style-type: none;
         animation: 1s ${fadeIn} ease-out;
     }
@@ -37,7 +37,7 @@ const TopAlbumsStyles = styled.div`
         font-size: 5em;
         line-height: 1;
         font-weight: 700;
-        padding: 0 16px;
+        padding: 0 25px;
         color: #333333;
         letter-spacing: -1.5px;
 

@@ -4,7 +4,7 @@ const WikiListStyles = styled.div`
 position: relative;
 margin: 0 auto 100px;
 width: 100%;
-max-width: 1232px;
+max-width: 1250px;
 height: auto;
 padding: 0 25px;
 
