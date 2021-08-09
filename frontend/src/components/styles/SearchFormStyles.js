@@ -26,7 +26,7 @@ const SearchFormStyles = styled.div`
         color: #333333;
     }
 
-    form {
+    div {
         margin: 16px 0 0;
         display: flex;
         flex-direction: row;
@@ -37,7 +37,7 @@ const SearchFormStyles = styled.div`
 
     input {
         margin: 0;
-        width: calc(100% - 150px);
+        width: 100%;
         font-size: 1.8em;
         font-weight: 400;
         line-height: 1;
@@ -45,11 +45,6 @@ const SearchFormStyles = styled.div`
         border: 1px solid #666666;
         border-radius: 12px;
         padding: 12px;
-
-        @media screen and (max-width: 600px) {
-            margin: 0 0 25px;
-            width: 100%;
-        }
     }
 
     button {

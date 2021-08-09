@@ -15,7 +15,7 @@ const TopAlbumsStyles = styled.div`
     width: 100%; 
     max-width: 1232px;
     height: auto;
-    padding: 100px 9px 75px;
+    padding: 100px 0 75px;
 
     ul {
         position: relative;
@@ -52,7 +52,7 @@ const TopAlbumsStyles = styled.div`
         width: 100%;
         height: auto;
         font-size: 1.6em;
-        line-height: 1.3;
+        line-height: 1.1;
         font-weight: 400;
         font-style: italic;
         text-align: center;
